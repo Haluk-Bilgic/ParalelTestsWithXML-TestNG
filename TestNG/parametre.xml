@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="my program" parallel="testss" thread-count="4" verbose="2"> <!-- verbose detay seviyesini belirttik -->
+<tests>
+<test name="test">
+<parameter name="firstname" value="halukk"/>
+<parameter name="lastname" value="bilgiç"/>
+<parameter name="email" value="ahbilgic@hotmail.com"/>
+<classes>
+<class name="Testng.parametre"/>
+</classes>
+
+</test>
+
+<test name="Chrome Test">
+ <parameter name="browser" value="chrome"/>
+  <classes>
+   <class name="Testng.ParalelTest"/>
+  </classes>
+ </test>
+ 
+ <test name="FireFox Test">
+  <parameter name="browser" value="firefox"/>
+  <classes>
+   <class name="Testng.ParalelTest"/>
+  </classes>
+</test>
+
+<test name="Test1">
+ 
+ <classes>
+ <class name="Testng.FileXml"/>
+ <class name="Testng.priorityVeEnabled"/>
+ </classes>
+ </test>
+
+<test name="test1">
+<classes>
+
+<class name="Testng.methodlar"/>
+
+<methods>
+<exclude name="Test2"/>
+<exclude name="Test4"/>
+
+</methods>
+</classes>
+
+</test>
+
+</tests>
+</suite>
